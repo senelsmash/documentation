@@ -27,10 +27,10 @@ prerequisite functions of SIMS that needed by client(CPE).
 || Link a sim card. |
 | void  | ```unlink(String uid, String simId)``` |
 || Un-link a sim card. |
-| void  | ```onHosted(String simId,int mcc, int mnc, int simType)``` |
+| void  | ```isHosted(String simId,int mcc, int mnc, int simType)``` |
 || Check the sim card is link/ unlink. |
 | void  | ```isLoggedIn()``` |
-|| Flag to check user is registered or logged in. |
+|| Flag to check the user is registered and logged in. |
 | void  | ```reset()``` |
 || Reset sims app connections and GCM token. |
 | void  | ```registerCallback(SubscriberCallback cb)``` |
@@ -63,8 +63,8 @@ This interface is a callbacks of ISubscriberInterface.
 | void  | ```register(RegisterResponse response)``` |
 | void  | ```link(LinkUnlinkResponse response)``` |
 | void  | ```unlink(LinkUnlinkResponse response)``` |
-| void  | ```onHosted(String iccId, boolean status)``` |
-| void  | ```isRegister(Boolean status)``` |
+| void  | ```isHosted(String iccId, boolean status)``` |
+| void  | ```isLoggedIn(Boolean status)``` |
 | void  | ```reset()``` |
 
 #### 1.1.3 RegisterResponse object ####
