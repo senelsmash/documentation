@@ -196,9 +196,8 @@ private Emitter.Listener onConnected = new Emitter.Listener() {
 | ```List<Link> links``` | List of Sims currently registerd to SIMS system under the same UID |
 
   
-#### Link ####
+#### Link/ Un-link function ####
 
-**Link/ Un-link function**
 
 ![Activity diagram - link/unlink](https://bytebucket.org/techleadintl/sims-app/raw/174bbc0800b477e599b1005515afd375b1330e8c/resources/link_unlink%20-%20ad.png?token=30f2f08f3553d58bfbef20beee0497c924fdaae1)
 
