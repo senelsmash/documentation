@@ -198,7 +198,7 @@ private Emitter.Listener onConnected = new Emitter.Listener() {
   
 #### Link ####
 
-** Link/ Un-link function **
+**Link/ Un-link function**
 
 ![Activity diagram - link/unlink](https://bytebucket.org/techleadintl/sims-app/raw/174bbc0800b477e599b1005515afd375b1330e8c/resources/link_unlink%20-%20ad.png?token=30f2f08f3553d58bfbef20beee0497c924fdaae1)
 
@@ -223,7 +223,7 @@ private Emitter.Listener onConnected = new Emitter.Listener() {
 - Function in SIMS socket manager that enables to register a device (UID) to the SIMS system.
 - Used first time the app is opened to register a device under a UID.
 
-** Register and login **
+**Register and login**
 
 ![Activity diagram - register and login](https://bytebucket.org/techleadintl/sims-app/raw/9030dac7f74ea4ddb7b6c1f849da38705f9289a3/resources/Register%20-%20ad.png?token=f32ed98e0346c88077e99fc31fe7848727bd3c3d)
 
@@ -315,7 +315,7 @@ Same as onConnect returns a list of SIMS if available **(LoginResponseEvent)**.
 | void  | ```disconnect()``` |
 || Device disconnecting function to SIMS. |
 
-** onDisconnect listener **
+**onDisconnect listener**
 ```
     private Emitter.Listener onDisconnect = new Emitter.Listener() {
         @Override
@@ -333,7 +333,7 @@ Same as onConnect returns a list of SIMS if available **(LoginResponseEvent)**.
 - used to reconnect to the system automatically
 - it is a socketIO function
 
-** onReconnect listener **
+**onReconnect listener**
 ```
     private Emitter.Listener mOnReconnect = new Emitter.Listener() {
         @Override
@@ -348,7 +348,7 @@ Same as onConnect returns a list of SIMS if available **(LoginResponseEvent)**.
 
 In onConnectError listener if there is a connection error it will disconnect the current connection and close the socket.
 
-Common errors : ** Request Register ** , ** Request Login ** , ** message not found ** and ** Unknown server error**
+Common errors : **Request Register** , **Request Login** , **message not found** and **Unknown server error**
 
 ### 7. transport ###
 - under transport call data such as ** token, data, uid and matrixVersion ** will be communicated to the server.
@@ -389,14 +389,16 @@ private Emitter.Listener onTransport = new Emitter.Listener() {
 onNewMessage listens for any new messages from the server, these messages are queries sent from the server
 example: check sim balance, self num etc.
 
-** Wake up device **
+**Wake up device**
 
 ![Activity diagram - wake up device](https://bytebucket.org/techleadintl/sims-app/raw/9030dac7f74ea4ddb7b6c1f849da38705f9289a3/resources/wake%20up%20-%20ad.png?token=9fb61928b18b480429fee285d70f516cfbdecb0c)
 
-** Send message **
+**Send message**
 
 ![Activity diagram - send message](https://bytebucket.org/techleadintl/sims-app/raw/9030dac7f74ea4ddb7b6c1f849da38705f9289a3/resources/send%20message%20-%20ad.png?token=830c31b834d4e1286b66461478e71f158e13f182)
 
+**Send Cost Matrix**
+![Activity diagram - send cost matrix](https://bytebucket.org/techleadintl/sims-app/raw/f9dafb85152192daa029889e47dfd32ed99d5b7b/resources/cost%20matrix%20-%20ad.png?token=aea78ec3826260c92bcac93c0259ed1fbb2fff8d)
 ```
  private Emitter.Listener onNewMessage = new Emitter.Listener() {
         @Override
