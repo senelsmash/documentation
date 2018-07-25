@@ -137,7 +137,7 @@ SSL: enabled
 | 10 |```dbPush```|
 | 11 |```isLink```|
 
-#### 1 Connect ####
+#### 1. Connect ####
 - Function in SIMS socket manager.
 - Function is used to connect to socket and establish a connection with the server.
 - Used to establish/Re-establish a connection.
@@ -164,7 +164,7 @@ SSL: enabled
 - Function is called in wake-up using GCM Token.
 - Function is used when reseting the connection.
 
-#### 2 connected ####
+#### 2. connected ####
 - Listener in SIMS socket manager.
 - After a user successfully connect to SIMS system/server ```onConnect``` listener will return **link** , **unlink** , **simStatus** and recent **cost matrix details** .
 
@@ -213,9 +213,11 @@ private Emitter.Listener onConnected = new Emitter.Listener() {
 | ``` int```| ```mcc```  | MCC of sim |
 | ``` String```| ```uid```  | UID of sim |
 
-#### 3 register ####
+#### 3. register ####
 - Function in SIMS socket manager that enables to register a device (UID) to the SIMS system.
 - Used first time the app is opened to register a device under a UID.
+
+![Activity diagram - register and login](https://bytebucket.org/techleadintl/sims-app/raw/9030dac7f74ea4ddb7b6c1f849da38705f9289a3/resources/Register%20-%20ad.png?token=f32ed98e0346c88077e99fc31fe7848727bd3c3d)
 
 ```    public void register(Telephony telephony){
         LogUtils.d(mContext, TAG, "register emit: " + telephony.toString());
@@ -285,7 +287,7 @@ private Emitter.Listener onRegister = new Emitter.Listener() {
 ```
 Same as onConnect returns a list of SIMS if available **(LoginResponseEvent)**.
 
-#### 4 disconnect ####
+#### 4. disconnect ####
 - Function in SIMS socket manager.
 - Function is used to disconnect from socket.
 
@@ -319,7 +321,7 @@ Same as onConnect returns a list of SIMS if available **(LoginResponseEvent)**.
     };
 ```
 
-#### 5 reconnect_attempt ####
+#### 5. reconnect_attempt ####
 - used to reconnect to the system automatically
 - it is a socketIO function
 
@@ -333,14 +335,14 @@ Same as onConnect returns a list of SIMS if available **(LoginResponseEvent)**.
     };
 ```
 
-#### 6 connect_error ####
+#### 6. connect_error ####
 - if connection failed due to any reason it will be caught in onConnectError which listen for a possible connection error
 
 In onConnectError listener if there is a connection error it will disconnect the current connection and close the socket.
 
 Common errors : ** Request Register ** , ** Request Login ** , ** message not found ** and ** Unknown server error**
 
-#### 7 transport ####
+#### 7. transport ####
 - under transport call data such as ** token, data, uid and matrixVersion ** will be communicated to the server.
 - data is basically the telephony object.
 - matrixVersion is used to find if there are any available updates for cost matrix.
@@ -374,10 +376,12 @@ private Emitter.Listener onTransport = new Emitter.Listener() {
         }
     };
 ```
-#### 8 new message ####
+#### 8. new message ####
 
 onNewMessage listens for any new messages from the server, these messages are queries sent from the server
 example: check sim balance, self num etc.
+
+![Activity diagram - wake up device](https://bytebucket.org/techleadintl/sims-app/raw/9030dac7f74ea4ddb7b6c1f849da38705f9289a3/resources/wake%20up%20-%20ad.png?token=9fb61928b18b480429fee285d70f516cfbdecb0c)
 
 ![Activity diagram - send message](https://bytebucket.org/techleadintl/sims-app/raw/9030dac7f74ea4ddb7b6c1f849da38705f9289a3/resources/send%20message%20-%20ad.png?token=830c31b834d4e1286b66461478e71f158e13f182)
 
