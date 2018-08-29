@@ -24,6 +24,8 @@ This interface allows IPC communication between client and server. It allows to 
 || Includes Traffic flow of Mcwill、phyical card and cloud card. |
 | void  | ```getHostedCards(String uid)``` |
 || Hosted card list with uid. |
+| void  | ```getSimInfoList()``` |
+|| Async call for request query sim list. |
 | void  | ```registerCallback(ISimsAppCallback cb)``` |
 || Register ISimsAppCallback function. |
 | void  | ```unregisterCallback(ISimsAppCallback cb)``` |
