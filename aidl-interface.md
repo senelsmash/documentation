@@ -19,7 +19,7 @@ This interface allows IPC communication between client and server. It allows to 
 | void  | ```getOrderingCost(int type, String destination)``` |
 || Current Cost Martix of user's Voice/ Data/ SMS plans sorted by the cost according to ascending order. |
 | void  | ```getQueryBalance()``` |
-|| Includes balance of Cootel account and balance of physical card. |
+|| Includes balance of McWill account and balance of physical card. |
 | void  | ```getTrafficFlow(long startDate, long endDate)``` |
 || Includes Traffic flow of Mcwill、phyical card and cloud card. |
 | void  | ```getHostedCards(String uid)``` |
