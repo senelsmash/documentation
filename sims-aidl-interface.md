@@ -1,7 +1,7 @@
 # Documentation of SIMS AIDL interfaces v(1.0.2) #
 Package name: _com.cootf.sims_
 
-This documentation is about the interface for communication of CPE and SIMS application.  
+This documentation is about the interface for communication with SIMS application.  
 
 ## 1. Interfaces ##
 
