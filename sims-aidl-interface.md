@@ -80,3 +80,7 @@ This interface is a response object of CostMatrix function in ISimsAppCallback. 
 || Data created time. |
 | String | ```updatedAt``` |
 || Data updated time. |
+
+**AIDL Source Code**
+
+```git clone git@bitbucket.org:techleadintl/sims-aidl-lib.git```
