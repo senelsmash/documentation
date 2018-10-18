@@ -70,16 +70,19 @@ This interface is a response object of CostMatrix function in ISimsAppCallback. 
 || Transaction type. (Eg. CALL/ DATA/ SMS). |
 | String | ```operatorName``` |
 || Name of the operator. |
-| String | ```amount``` |
+| double | ```amount``` |
 || Available resource amount. |
-| String | ```cost``` |
+| double | ```cost``` |
 || Cost per resource. |
-| String | ```validTime``` |
+| long | ```validTime``` |
 || Cost matrix valid time. |
-| String | ```createdAt``` |
+| long | ```createdAt``` |
 || Data created time. |
-| String | ```updatedAt``` |
+| long | ```updatedAt``` |
 || Data updated time. |
+| int | ```priceOrder``` |
+|| The unique order of the total price about the transaction method. |
+
 
 **AIDL Source Code**
 
